@@ -42,6 +42,13 @@ Centos7:
 
   <<: *testing_script
 
+Ubuntu1404:
+  variables:
+    distro: 'ubuntu:14.04'
+    playbook: test.yml
+
+  <<: *testing_script
+
 Debian8:
   variables:
     distro: debian:8
