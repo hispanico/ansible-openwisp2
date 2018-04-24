@@ -2,7 +2,8 @@
 
 .script_template: &testing_script
   tags:
-   - docker-tester
+   - kubernetes
+   #- docker-tester
   script:
     # Download test shim.
     - wget -O ${PWD}/tests/test.sh https://gitlab.ninux.org/snippets/10/raw
@@ -42,12 +43,12 @@ Centos7:
 
   <<: *testing_script
 
-Ubuntu1404:
-  variables:
-    distro: 'ubuntu:14.04'
-    playbook: test.yml
-
-  <<: *testing_script
+#Ubuntu1404:
+#  variables:
+#    distro: 'ubuntu:14.04'
+#    playbook: test.yml
+#
+#  <<: *testing_script
 
 Debian8:
   variables:
